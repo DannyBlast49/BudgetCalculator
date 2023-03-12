@@ -3,13 +3,14 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import logo from './logo.svg';
 import AppRouter from './AppRouter';
 import Navigation from './Navigation/Navigation';
-import './App.css';
+import { navList } from './Navigation/constants';
+import './App.scss';
 
 function App() {
   return (
     <>
       <Router>
-        <Navigation />
+        <Navigation  navList={navList}/>
         <AppRouter />
       </Router>
       <div className="App">

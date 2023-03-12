@@ -1,41 +1,23 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import Button from '@mui/material/Button';
+import { NavLink } from 'react-router-dom';
+import { NavigationLink } from './types';
+import './Navigation.scss';
 
-const Navigation = () => (
-  <div>
-    <nav>
-      <ul>
-        <li>
-          <Link className="nav-button" to="/">
-            <Button variant="contained">
-              Calculator
-            </Button>
-          </Link>
-        </li>
-        <li>
-          <Link className="nav-button" to="/Expenses">
-            <Button variant="contained">
-              Expenses
-            </Button>
-          </Link>
-        </li>
-        <li>
-          <Link className="nav-button" to="/Savings">
-            <Button variant="contained">
-              Savings
-            </Button>
-          </Link>
-        </li>
-        <li>
-          <Link className="nav-button" to="/Settings">
-            <Button variant="contained">
-              Settings
-            </Button>
-          </Link>
-        </li>
-      </ul>
-    </nav>
+interface navigationProps {
+  navList: NavigationLink[];
+}
+
+const Navigation = (props: navigationProps) => (
+  <div className="navigation">
+    <ul>
+      { 
+        props.navList.map((link) => (
+          <NavLink className="nav-button" to={link.path}>
+            <li>{link.label}</li>
+          </NavLink>
+        ))
+      }
+    </ul>
   </div>
 );
 
