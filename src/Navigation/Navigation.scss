@@ -1,11 +1,49 @@
+@import "../util/colors.scss";
+
+@keyframes button-hover-in {
+  from {background-color: $nav-background;}
+  to {background-color: $nav-button;}
+}
+
+@keyframes button-hover-out {
+  from {background-color: $nav-button;}
+  to {background-color: $nav-background;}
+}
+
 .navigation {
+  display: flex;
+  justify-content: center;
   ul {
     display: flex;
+    padding: 0;
     a {
       text-decoration: none;
-    }
-    li {
-      list-style: none;
+      margin: 0 .25rem;
+
+      li {
+        list-style: none;
+        padding: .5rem 1rem .6rem;
+        border-radius: .5rem;
+      }
+      &.active {
+        li {
+          background-color: $nav-button-active;
+        }
+      }
+      &:not(.active) {
+        li {
+          animation-name: button-hover-out;
+          animation-duration: .6s;
+          &:hover {
+            background-color: $nav-button;
+            animation-name: button-hover-in;
+            animation-duration: .6s;
+          }
+        }
+      }
+      &:active {
+        color: $nav-button-text-active;
+      }
     }
   }
 }
