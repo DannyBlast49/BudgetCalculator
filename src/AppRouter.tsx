@@ -13,23 +13,24 @@ const AppRouter = () => (
       navList.map((link) => {
         switch (link.name) {
           case 'calculator': {
-            return (<Route path={link.path} element={<Calculator />} />);
+            return (<Route key={link.name} path={link.path} element={<Calculator />} />);
           }
           case 'expenses': {
-            return (<Route path={link.path} element={<Expenses />} />);
+            return (<Route key={link.name} path={link.path} element={<Expenses />} />);
           }
           case 'savings': {
-            return (<Route path={link.path} element={<Savings />} />);
+            return (<Route key={link.name} path={link.path} element={<Savings />} />);
           }
           case 'settings': {
-            return (<Route path={link.path} element={<Settings />} />);
+            return (<Route key={link.name} path={link.path} element={<Settings />} />);
           }
           default: {
-            return (<Route path="/PageNotFound" element={<PageNotFound />} />);
+            return (<Route key="not found" path="/PageNotFound" element={<PageNotFound />} />);
           }
         }
       })
     }
+    <Route path="*" element={<PageNotFound />} />
   </Routes>
 );
 
