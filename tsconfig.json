@@ -23,6 +23,7 @@
     "strictNullChecks": true,
     
   },
+  "checkJs": true,
   "include": [
     "src"
   ]

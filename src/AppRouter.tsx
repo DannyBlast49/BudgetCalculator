@@ -25,7 +25,7 @@ const AppRouter = () => (
             return (<Route key={link.name} path={link.path} element={<Settings />} />);
           }
           default: {
-            return (<Route key="not found" path="/PageNotFound" element={<PageNotFound />} />);
+            return (<Route key="not found" path="*" element={<PageNotFound />} />);
           }
         }
       })

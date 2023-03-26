@@ -1,8 +1,9 @@
 import React from 'react';
+import PageHeader from '../common/PageHeader';
 
 const Calculator = () => {
   return (
-    <h2>Calculator</h2>
+    <PageHeader title="Calculator" />
   );
 };
 
