@@ -1,13 +1,4 @@
-@import "../common/colors.scss";
 
-.grid-taxtable {
-  max-width: 50%;
-  margin: 1rem auto 1rem;
-  background-color: $grid-taxtable-bg;
-  padding: 0 6px;
-  border-radius: 6px;
-
-  .column-header {
-    font-weight: 600;
-  }
+.page-settings {
+  padding: 0 2rem;
 }
