@@ -1,8 +1,9 @@
 import React from 'react';
+import PageHeader from '../common/PageHeader';
 
 const Savings = () => {
   return (
-    <h2>Savings</h2>
+    <PageHeader title="Savings" />
   );
 };
 

@@ -1,4 +1,4 @@
-@import "../util/colors.scss";
+@import "../common/colors.scss";
 
 @keyframes button-hover-in {
   from {background-color: $nav-background;}
@@ -19,6 +19,7 @@
     a {
       text-decoration: none;
       margin: 0 .25rem;
+      color: $nav-button-text;
 
       li {
         list-style: none;
@@ -42,7 +43,7 @@
         }
       }
       &:active {
-        color: $nav-button-text-active;
+        color: $nav-button-text;
       }
     }
   }

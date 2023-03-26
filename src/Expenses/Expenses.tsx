@@ -1,8 +1,9 @@
 import React from 'react';
+import PageHeader from '../common/PageHeader';
 
 const Expenses = () => {
   return (
-    <h2>Expenses</h2>
+    <PageHeader title="Expenses" />
   );
 };
 

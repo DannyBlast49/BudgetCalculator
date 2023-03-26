@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import AppRouter from './AppRouter';
 import Navigation from './Navigation/Navigation';
 import { navList } from './Navigation/constants';
@@ -10,10 +10,12 @@ function App() {
   return (
     <>
       <Router>
-        <Navigation  navList={navList}/>
-        <AppRouter />
+        <div className="content-wrapper">
+          <Navigation  navList={navList}/>
+          <AppRouter />
+        </div>
       </Router>
-      <div className="App">
+      {/*<div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -28,7 +30,7 @@ function App() {
             Learn React
           </a>
         </header>
-      </div>
+      </div>*/}
     </>
   );
 }

@@ -12,9 +12,11 @@ const Navigation = (props: navigationProps) => (
     <ul>
       { 
         props.navList.map((link) => (
-          <NavLink className="nav-button" to={link.path}>
-            <li>{link.label}</li>
-          </NavLink>
+          <div key={link.label || "undefined-link"}>
+            <NavLink className="nav-button" to={link.path}>
+              <li>{link.label}</li>
+            </NavLink>
+          </div>
         ))
       }
     </ul>
