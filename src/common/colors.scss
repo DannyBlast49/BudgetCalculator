@@ -1,9 +1,11 @@
 $primary: #d0efff;
 $content-bg: #f5f5f5;
+$white: #ffffff;
 
 $nav-button: $primary;
 $nav-button-active: #eeeeee;
 $nav-button-text: #000000;
 $nav-background: $content-bg;
 
-$grid-taxtable-bg: $nav-button;
+$grid-taxtable-bg: $primary;
+$grid-taxtable-edit-btn-wrapper: $white;
