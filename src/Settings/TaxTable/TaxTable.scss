@@ -7,7 +7,25 @@
   padding: 0 6px;
   border-radius: 6px;
 
+  .edit-table {
+    display: flex;
+    justify-content: right;
+  }
+
   .column-header {
     font-weight: 600;
+  }
+
+  .footer-message {
+    display: flex;
+    align-items: center;
+  }
+
+  .edit-action-btn {
+    background-color: $grid-taxtable-edit-btn-wrapper;
+
+    &:hover {
+      background-color: $grid-taxtable-edit-btn-wrapper;
+    }
   }
 }
